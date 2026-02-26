@@ -1,0 +1,14 @@
+services:
+  mirror-history:
+    build: .
+    ports:
+      - "31072:31072"
+    volumes:
+      - mirror-history-data:/home/lifeos/.mirror-history
+    environment:
+      - MIRROR_HISTORY_PORT=31072
+      - MIRROR_HISTORY_HOST=0.0.0.0
+    restart: unless-stopped
+
+volumes:
+  mirror-history-data:

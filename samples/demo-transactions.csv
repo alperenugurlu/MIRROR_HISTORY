@@ -1,0 +1,49 @@
+Date,Description,Amount,Currency,Category,Account
+2025-11-01,Netflix,-15.99,USD,Entertainment,Checking
+2025-11-03,Whole Foods,-87.42,USD,Groceries,Checking
+2025-11-05,Shell Gas,-52.30,USD,Transportation,Credit Card
+2025-11-08,Spotify,-9.99,USD,Entertainment,Checking
+2025-11-10,Amazon - Electronics,-299.99,USD,Shopping,Credit Card
+2025-11-12,Starbucks,-6.50,USD,Dining,Credit Card
+2025-11-15,Planet Fitness,-29.99,USD,Health,Checking
+2025-11-18,Target,-45.67,USD,Shopping,Credit Card
+2025-11-20,Con Edison,-125.00,USD,Utilities,Checking
+2025-11-22,Uber,-28.50,USD,Transportation,Credit Card
+2025-11-25,Chipotle,-12.75,USD,Dining,Credit Card
+2025-11-28,Trader Joes,-62.33,USD,Groceries,Checking
+2025-12-01,Netflix,-15.99,USD,Entertainment,Checking
+2025-12-02,Whole Foods,-92.18,USD,Groceries,Checking
+2025-12-04,Shell Gas,-48.90,USD,Transportation,Credit Card
+2025-12-07,Spotify,-9.99,USD,Entertainment,Checking
+2025-12-10,Adobe Creative Cloud,-54.99,USD,Software,Credit Card
+2025-12-12,Starbucks,-7.25,USD,Dining,Credit Card
+2025-12-15,Planet Fitness,-29.99,USD,Health,Checking
+2025-12-18,Amazon - Returns,299.99,USD,Shopping,Credit Card
+2025-12-20,Con Edison,-135.00,USD,Utilities,Checking
+2025-12-22,Uber,-32.00,USD,Transportation,Credit Card
+2025-12-25,Best Buy,-549.99,USD,Shopping,Credit Card
+2025-12-28,Trader Joes,-58.90,USD,Groceries,Checking
+2026-01-01,Netflix,-15.99,USD,Entertainment,Checking
+2026-01-03,Whole Foods,-78.55,USD,Groceries,Checking
+2026-01-05,Shell Gas,-55.40,USD,Transportation,Credit Card
+2026-01-07,Spotify,-10.99,USD,Entertainment,Checking
+2026-01-08,Adobe Creative Cloud,-54.99,USD,Software,Credit Card
+2026-01-10,Starbucks,-6.75,USD,Dining,Credit Card
+2026-01-15,Planet Fitness,-34.99,USD,Health,Checking
+2026-01-18,Target,-38.20,USD,Shopping,Credit Card
+2026-01-20,Con Edison,-142.00,USD,Utilities,Checking
+2026-01-22,Uber,-25.00,USD,Transportation,Credit Card
+2026-01-24,DoorDash,-67.80,USD,Dining,Credit Card
+2026-01-25,Chipotle,-13.50,USD,Dining,Credit Card
+2026-01-28,Trader Joes,-71.20,USD,Groceries,Checking
+2026-01-30,Gym Equipment Store,-189.00,USD,Shopping,Credit Card
+2026-02-01,Netflix,-15.99,USD,Entertainment,Checking
+2026-02-03,Whole Foods,-95.40,USD,Groceries,Checking
+2026-02-05,Shell Gas,-51.20,USD,Transportation,Credit Card
+2026-02-07,Spotify,-10.99,USD,Entertainment,Checking
+2026-02-08,Adobe Creative Cloud,-54.99,USD,Software,Credit Card
+2026-02-10,ChatGPT Plus,-20.00,USD,Software,Credit Card
+2026-02-12,Starbucks,-7.00,USD,Dining,Credit Card
+2026-02-15,Planet Fitness,-34.99,USD,Health,Checking
+2026-02-18,Whole Foods,-110.25,USD,Groceries,Checking
+2026-02-20,Con Edison,-155.00,USD,Utilities,Checking

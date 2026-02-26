@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Drag region for Electron title bar */
+.drag-region {
+  -webkit-app-region: drag;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a3c;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a4c;
+}
+
+/* Diff card type accent borders */
+.card-subscription { border-left: 3px solid #06b6d4; }
+.card-price_increase { border-left: 3px solid #f43f5e; }
+.card-refund_pending { border-left: 3px solid #f59e0b; }
+.card-anomaly { border-left: 3px solid #f97316; }
+.card-spending_summary { border-left: 3px solid #5e5e78; }
+
+/* Timeline border utility */
+.border-l-3 { border-left-width: 3px; }
+
+/* Dark form elements */
+.input-field {
+  @apply w-full px-3 py-2 rounded-lg bg-surface-2 border border-surface-3 text-sm text-text-primary placeholder:text-text-muted;
+  @apply focus:outline-none focus:ring-2 focus:ring-grain-cyan/30 focus:border-grain-cyan/50;
+}
+.btn-primary {
+  @apply w-full px-4 py-2.5 rounded-lg bg-grain-cyan hover:bg-grain-cyan-glow disabled:bg-surface-3 disabled:text-text-muted disabled:cursor-not-allowed;
+  @apply text-surface-0 text-sm font-medium transition-all;
+}
+.btn-secondary {
+  @apply w-full px-4 py-2.5 rounded-lg bg-surface-2 hover:bg-surface-3 border border-surface-3;
+  @apply text-text-secondary text-sm font-medium transition-all;
+}
+
+/* Grain UI utilities */
+.grain-card {
+  @apply bg-surface-1 rounded-xl border border-surface-3/50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.grain-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  @apply border-surface-3;
+}
+.grain-glow {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.15), inset 0 0 15px rgba(6, 182, 212, 0.05);
+}
+.grain-border {
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+/* Animations */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-slide-up { animation: slide-up 0.15s ease-out; }
+.animate-fade-in { animation: fade-in 0.2s ease-out; }
+
+/* Voice recorder wave animation */
+@keyframes wave {
+  from { height: 4px; }
+  to { height: 20px; }
+}
+
+/* ── Mirror History Branding ── */
+
+/* Login page scanning line */
+@keyframes scanLine {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100vh); }
+}
+
+/* Subtle glitch flicker on title text */
+@keyframes glitchFlicker {
+  0%, 93%, 100% { text-shadow: none; }
+  94% { text-shadow: -2px 0 #f43f5e, 2px 0 #06b6d4; }
+  96% { text-shadow: 1px 0 #f43f5e, -1px 0 #06b6d4; }
+  98% { text-shadow: -1px 0 #06b6d4, 1px 0 #f43f5e; }
+}
+
+.glitch-text {
+  animation: glitchFlicker 4s ease-in-out infinite;
+}
+
+.login-grid-bg {
+  background-image: radial-gradient(circle, rgba(6, 182, 212, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.login-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.2), transparent);
+  animation: scanLine 8s linear infinite;
+  pointer-events: none;
+}
+
+/* ── Sci-fi Ambient Effects ── */
+
+/* Global CRT scan lines overlay — very subtle horizontal lines */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* Vignette — dark edges like a monitor */
+.crt-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+/* Global ambient scan line — sweeps across the whole app */
+@keyframes ambientScan {
+  0% { top: -2px; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.ambient-scan-line {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 9997;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 182, 212, 0.08),
+    rgba(6, 182, 212, 0.15),
+    rgba(6, 182, 212, 0.08),
+    transparent
+  );
+  animation: ambientScan 12s linear infinite;
+}
+
+/* Card viewfinder corners — animated brackets on hover */
+.grain-card {
+  position: relative;
+}
+.grain-card::before,
+.grain-card::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.grain-card::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #06b6d4;
+  border-left: 2px solid #06b6d4;
+  border-top-left-radius: 4px;
+}
+.grain-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #06b6d4;
+  border-right: 2px solid #06b6d4;
+  border-bottom-right-radius: 4px;
+}
+.grain-card:hover::before,
+.grain-card:hover::after {
+  opacity: 0.5;
+}
+
+/* Sidebar pulse border — subtle breathing glow */
+@keyframes sidebarPulse {
+  0%, 100% { border-color: rgba(6, 182, 212, 0.05); }
+  50% { border-color: rgba(6, 182, 212, 0.15); }
+}
+
+.sidebar-glow {
+  animation: sidebarPulse 4s ease-in-out infinite;
+}
+
+/* Data stream animation for status bar */
+@keyframes dataStream {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+.data-stream {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(6, 182, 212, 0.06) 25%,
+    rgba(6, 182, 212, 0.12) 50%,
+    rgba(6, 182, 212, 0.06) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: dataStream 6s linear infinite;
+}
+
+/* Recording dot pulse — for active recording indicators */
+@keyframes recPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(6, 182, 212, 0); }
+}
+
+.rec-pulse {
+  animation: recPulse 2s ease-in-out infinite;
+}
+
+/* Compare bar fill animation */
+@keyframes compareBarGrow {
+  from { width: 0%; }
+}
+.compare-bar-fill {
+  animation: compareBarGrow 0.8s ease-out forwards;
+}
+
+/* Photo gallery reveal animation */
+@keyframes photoReveal {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+.photo-reveal {
+  opacity: 0;
+  animation: photoReveal 0.4s ease-out forwards;
+}
+
+/* Photo scan line sweep */
+@keyframes photoScan {
+  0% { top: -2px; }
+  100% { top: calc(100% + 2px); }
+}
+.photo-scan-line {
+  animation: photoScan 2.5s linear infinite;
+}
+
+/* Face detection frame pulse */
+@keyframes framePulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+.detection-frame {
+  animation: framePulse 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compare-bar-fill { animation: none; }
+  .photo-reveal { animation: none; opacity: 1; }
+  .photo-scan-line { animation: none; display: none; }
+  .detection-frame { animation: none; opacity: 0.5; }
+  .glitch-text { animation: none; }
+  .login-scan-line { animation: none; display: none; }
+  .ambient-scan-line { animation: none; display: none; }
+  .crt-overlay { display: none; }
+  .crt-vignette { display: none; }
+  .sidebar-glow { animation: none; }
+  .data-stream { animation: none; }
+  .rec-pulse { animation: none; }
+}
