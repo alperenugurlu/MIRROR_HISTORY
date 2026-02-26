@@ -9,6 +9,8 @@
  ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝
           H I S T O R Y
 ```
+</div>
+
 
 <img width="500" height="276" alt="image" src="https://github.com/user-attachments/assets/1ce38123-bf21-4ff1-b083-c2b19472f491" />
 
