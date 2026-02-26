@@ -10,6 +10,10 @@
           H I S T O R Y
 ```
 
+<img width="500" height="276" alt="image" src="https://github.com/user-attachments/assets/1ce38123-bf21-4ff1-b083-c2b19472f491" />
+
+
+
 **Your entire history of you. Recorded. Analyzed. Confronted.**
 
 *What if there was a grain implanted behind your ear that recorded everything you did, everything you saw? What if you could replay any moment of your life and have an AI tell you the uncomfortable truth about who you really are?*
